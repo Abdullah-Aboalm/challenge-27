@@ -1,0 +1,193 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');c
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  height: 100vh;
+  font-family: 'Roboto', sans-serif;
+  background-color: #ff7978;
+  overflow: hidden;
+}
+
+.bg {
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+}
+
+/* card */
+
+.container {
+  width: 60%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+
+.des {
+  width: 45%;
+}
+
+.des h1 {
+  color: white;
+  width: 99%;
+  font-size: 35px;
+}
+
+.des p {
+  color: rgba(255, 255, 255, 0.818);
+  font-size: 15px;
+  line-height: 1.5;
+  margin-top: 20px;
+}
+
+.form-cont {
+  width: 50%;
+}
+
+.form-cont .free-trial {
+  margin-bottom: 25px;
+  color: white;
+  background-color: #5d54a3;
+  padding: 15px;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 8px rgba(0, 0, 0, 0.138);
+  font-size: 15px;
+  letter-spacing: .5px;
+  font-weight: bold;
+}
+
+.form-cont .free-trial span {
+  font-weight: 200;
+}
+
+.form-cont .form {
+  background-color: white;
+  padding: 25px;
+  border-radius: 10px;
+}
+
+.form-cont .form input:not([type="submit"]) {
+  width: 100%;
+  padding: 10px 50px 10px 20px;
+  border-radius: 5px;
+  border: 1px solid rgb(92, 92, 92);
+  margin-bottom: 15px;
+}
+
+.input-cont {
+  position: relative;
+}
+
+.input-cont::before {
+  font-family: "Font Awesome 5 Free";
+  content: "\21";
+  position: absolute;
+  right: 3%;
+  top: 18%;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 12px;
+  background-color: #ff6161;
+  display: none;
+}
+
+.input-cont.error::before {
+  display: flex !important;
+}
+
+.input-cont p.appear {
+  display: block !important;
+}
+
+.form-cont .form input:not([type="submit"]):focus {
+  outline-color: rgb(93, 93, 93);
+}
+
+.form-cont .form p:not(.terms) {
+  display: none;
+  margin-top: -5px;
+  margin-bottom: 10px;
+  text-align: right;
+  font-size: 11px;
+  font-style: italic;
+  color: #ff716e;
+}
+
+.form-cont .form input[type="submit"] {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  background-color: #37cc8a;
+  color: white;
+  font-weight: bold;
+  letter-spacing: .5px;
+  box-shadow: 0 3px #47b483;
+  cursor: pointer;
+  margin-bottom: 15px;
+  transition: .2s;
+}
+
+.form-cont .form input[type="submit"]:hover {
+  background-color: #3eda94;
+}
+
+.form-cont .form p.terms {
+  font-size: 11px;
+  text-align: center;
+  color: rgba(146, 146, 146, 0.681);
+}
+
+.form-cont .form p.terms span {
+  font-weight: bold;
+  color: #f97781;
+  cursor: pointer;
+}
+
+/* mobile */
+
+@media screen and (max-device-width: 767px) {
+  .container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: unset;
+    text-align: center;
+  }
+  .des {
+    width: 90%;
+    margin: 110px 0;
+  }
+  .form-cont {
+    width: 90%;
+  }
+}
+
+/* tablet */
+
+@media screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  .container {
+    width: 80%;
+  }
+}
